@@ -1,5 +1,6 @@
-/vendor
-/node_modules
-Homestead.yaml
-Homestead.json
+/.idea/
+/vendor/
+/node_modules/
 .env
+composer.lock
+composer.phar
