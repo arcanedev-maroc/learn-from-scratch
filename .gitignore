@@ -1,5 +1,7 @@
 /.idea/
 /vendor/
+/bower_components/
+/resources/assets/bower/
 /node_modules/
 .env
 composer.lock

@@ -1,0 +1,16 @@
+{
+  "name": "learn-from-scratch",
+  "description": "laravel forum (laracasts clone)",
+  "homepage": "https://github.com/arcanedev-maroc/learn-from-scratch",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "material-design-lite": "~1.0.6"
+  }
+}
