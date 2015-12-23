@@ -1,15 +1,19 @@
 <?php
 
+namespace App\Tests;
+
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class ExampleTest extends TestCase
 {
+    /* ------------------------------------------------------------------------------------------------
+     |  Tests Functions
+     | ------------------------------------------------------------------------------------------------
+     */
     /**
      * A basic functional test example.
-     *
-     * @return void
      */
     public function testBasicExample()
     {
@@ -21,6 +25,5 @@ class ExampleTest extends TestCase
             ->see("You have been clicked.")
         // Assert that the current url is /feedback
             ->seePageIs('/feedback');
-
     }
 }

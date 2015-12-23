@@ -1,20 +1,22 @@
 {
-    "name": "laravel/laravel",
+    "name":        "laravel/laravel",
     "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
-    "license": "MIT",
-    "type": "project",
+    "keywords":    ["framework", "laravel"],
+    "license":     "MIT",
+    "type":        "project",
     "require": {
-        "php": ">=5.5.9",
+        "php":               ">=5.5.9",
         "laravel/framework": "5.2.*",
-        "predis/predis": "^1.0"
+        "predis/predis":     "^1.0"
     },
     "require-dev": {
-        "fzaninotto/faker": "~1.4",
-        "mockery/mockery": "0.9.*",
-        "phpunit/phpunit": "~4.0",
-        "symfony/css-selector": "2.8.*|3.0.*",
-        "symfony/dom-crawler": "2.8.*|3.0.*"
+        "fzaninotto/faker":            "~1.4",
+        "mockery/mockery":             "0.9.*",
+        "phpunit/phpunit":             "~4.0",
+        "symfony/css-selector":        "2.8.*|3.0.*",
+        "symfony/dom-crawler":         "2.8.*|3.0.*",
+        "barryvdh/laravel-ide-helper": "^2.1",
+        "barryvdh/laravel-debugbar":   "^2.1"
     },
     "autoload": {
         "classmap": [
@@ -25,9 +27,9 @@
         }
     },
     "autoload-dev": {
-        "classmap": [
-            "tests/TestCase.php"
-        ]
+        "psr-4": {
+            "App\\Tests\\": "tests/"
+        }
     },
     "scripts": {
         "post-root-package-install": [
@@ -44,6 +46,7 @@
             "php artisan clear-compiled"
         ],
         "post-update-cmd": [
+            "php artisan ide-helper:generate",
             "php artisan optimize"
         ]
     },
