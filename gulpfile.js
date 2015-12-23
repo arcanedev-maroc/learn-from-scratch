@@ -1,5 +1,12 @@
 var elixir = require('laravel-elixir');
 
+require('laravel-elixir-vueify');
+
+var dir = {
+    dest:  'public/assets',
+    bower: '../bower'
+};
+
 /*
  |--------------------------------------------------------------------------
  | Elixir Asset Management
@@ -12,5 +19,11 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
-    mix.sass('app.scss');
+    mix.sass('app.scss', dir.dest + '/css')
+       .scripts([
+           dir.bower + '/material-design-lite/material.js'
+       ], dir.dest + '/js/vendors.js')
+       .browserify('app.js', dir.dest + '/js');
+
+    mix.copy('resources/assets/bower/font-awesome/fonts', dir.dest + '/fonts');
 });
