@@ -13,7 +13,7 @@ class CreateTopicsTable extends Migration
     public function up()
     {
         //
-        Schema::create('users', function (Blueprint $table)
+        Schema::create('topics', function (Blueprint $table)
         {
             $table->string('title');
             $table->string('description');
