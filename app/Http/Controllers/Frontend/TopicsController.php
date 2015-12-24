@@ -5,6 +5,7 @@ class TopicsController
     public function index()
     {
         // TODO: implement this method
+
     }
 
     public function show($topic)
