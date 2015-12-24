@@ -58,37 +58,37 @@ Route::group(['middleware' => ['web']], function () {
             'prefix' => 'topics',
         ], function () {
             Route::get('/', [
-                'as'   => 'public::topics.index',
+                'as'   => 'admin::topics.index',
                 'uses' => 'TopicsController@index',
             ]);
 
             Route::get('{topic}', [
-                'as'   => 'public::topics.show',
+                'as'   => 'admin::topics.show',
                 'uses' => 'TopicsController@show',
             ]);
 
             Route::get('create', [
-                'as'   => 'public::topics.create',
+                'as'   => 'admin::topics.create',
                 'uses' => 'TopicsController@create',
             ]);
 
             Route::post('store', [
-                'as'   => 'public::topics.store',
+                'as'   => 'admin::topics.store',
                 'uses' => 'TopicsController@store',
             ]);
 
             Route::get('{topic}/edit', [
-                'as'   => 'public::topics.edit',
+                'as'   => 'admin::topics.edit',
                 'uses' => 'TopicsController@edit',
             ]);
 
             Route::put('{topic}/update', [
-                'as'   => 'public::topics.store',
-                'uses' => 'TopicsController@store',
+                'as'   => 'admin::topics.update',
+                'uses' => 'TopicsController@update',
             ]);
 
             Route::delete('{topic}', [
-                'as'   => 'public::topics.delete',
+                'as'   => 'admin::topics.delete',
                 'uses' => 'TopicsController@delete',
             ]);
         });
