@@ -11,7 +11,6 @@ class TopicSeeder extends Seeder
      */
     public function run()
     {
-        //
         factory(App\Models\Topic::class, 5)->create();
     }
 }

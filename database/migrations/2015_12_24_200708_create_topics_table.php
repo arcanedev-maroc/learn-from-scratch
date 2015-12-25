@@ -7,14 +7,10 @@ class CreateTopicsTable extends Migration
 {
     /**
      * Run the migrations.
-     *
-     * @return void
      */
     public function up()
     {
-        //
-        Schema::create('topics', function (Blueprint $table)
-        {
+        Schema::create('topics', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
             $table->text('body');
@@ -24,11 +20,9 @@ class CreateTopicsTable extends Migration
 
     /**
      * Reverse the migrations.
-     *
-     * @return void
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('topics');
     }
 }
