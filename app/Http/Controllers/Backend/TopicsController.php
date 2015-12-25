@@ -6,7 +6,8 @@ class TopicsController extends Controller
 {
     public function index()
     {
-        return view ('backend.topics.index');
+        $topics = \App\Models\Topic::all();
+        return view ('backend.topics.index',compact('topics', $topics));
     }
 
     public function show($topic)
@@ -16,6 +17,7 @@ class TopicsController extends Controller
 
     public function create()
     {
+
         return view ('backend.topics.create');
     }
 

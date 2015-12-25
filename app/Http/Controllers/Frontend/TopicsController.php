@@ -7,6 +7,8 @@ class TopicsController extends Controller
     public function index()
     {
         // TODO: implement this method
+
+
     }
 
     public function show($topic)

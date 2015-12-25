@@ -6,6 +6,7 @@ class PagesController extends Controller
 {
     public function index()
     {
-        return view('frontend.home');
+        $topics = \App\Models\Topic::all();
+        return view('frontend.home',compact('topics', $topics));
     }
 }

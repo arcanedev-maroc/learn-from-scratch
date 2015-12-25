@@ -17,8 +17,9 @@ class ExampleTest extends TestCase
      */
     public function testBasicExample()
     {
-       $topic = factory(Topic::class)->create();
+      // $topic = factory(Topic::class)->create();
 
+        $this->visit('/admin/topics/create');
 
     }
 }
