@@ -1,21 +1,22 @@
 <?php namespace App\Http\Controllers\Backend;
 
-class TopicsController extends \App\Http\Controllers\Controller
+use App\Http\Controllers\Controller;
+
+class TopicsController extends Controller
 {
     public function index()
     {
-        // TODO: implement this method
-        return view ('');
+        return view ('backend.topics.index');
     }
 
     public function show($topic)
     {
-        // TODO: implement this method
+        return view ('backend.topics.show');
     }
 
     public function create()
     {
-        // TODO: implement this method
+        return view ('backend.topics.create');
     }
 
     public function store()
@@ -25,7 +26,7 @@ class TopicsController extends \App\Http\Controllers\Controller
 
     public function edit($topic)
     {
-        // TODO: implement this method
+        return view ('backend.topics.edit');
     }
 
     public function update($topic)

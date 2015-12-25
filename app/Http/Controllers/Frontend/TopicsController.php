@@ -1,13 +1,12 @@
 <?php namespace App\Http\Controllers\Frontend;
 
+use App\Http\Controllers\Controller;
 
-
-class TopicsController extends \App\Http\Controllers\Controller
+class TopicsController extends Controller
 {
     public function index()
     {
         // TODO: implement this method
-
     }
 
     public function show($topic)
