@@ -1,6 +1,8 @@
 <?php namespace App\Http\Controllers\Frontend;
 
-class TopicsController
+
+
+class TopicsController extends \App\Http\Controllers\Controller
 {
     public function index()
     {

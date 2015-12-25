@@ -1,10 +1,11 @@
 <?php namespace App\Http\Controllers\Backend;
 
-class TopicsController
+class TopicsController extends \App\Http\Controllers\Controller
 {
     public function index()
     {
         // TODO: implement this method
+        return view ('');
     }
 
     public function show($topic)

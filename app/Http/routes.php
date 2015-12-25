@@ -8,7 +8,7 @@
  |   NEVER USE `Route::controller()` OR `Route::resource()`.
  |
  |   This is what happen if you used them : (ノ ゜Д゜)ノ ︵ ┻━┻
- */
+ */ // This is group for /web
 Route::group(['middleware' => ['web']], function () {
     /* ------------------------------------------------------------------------------------------------
      |  Frontend Routes
@@ -49,6 +49,7 @@ Route::group(['middleware' => ['web']], function () {
      | ------------------------------------------------------------------------------------------------
      */
     Route::group([
+        'prefix' => 'admin',
         'namespace' => 'Backend',
     ], function () {
         /**
