@@ -49,9 +49,14 @@ Route::group(['middleware' => ['web']], function () {
      | ------------------------------------------------------------------------------------------------
      */
     Route::group([
-        'prefix' => 'admin',
         'namespace' => 'Backend',
+        'prefix'    => 'admin',
     ], function () {
+        Route::get('/', [
+            'as'   => 'admin::index',
+            'uses' => 'PagesController@index',
+        ]);
+
         /**
          * Topics Routes
          */
