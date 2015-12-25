@@ -5,7 +5,7 @@ namespace App\Tests;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
-
+use App\Topic;
 class ExampleTest extends TestCase
 {
     /* ------------------------------------------------------------------------------------------------
@@ -17,7 +17,8 @@ class ExampleTest extends TestCase
      */
     public function testBasicExample()
     {
-        // Visit the hompage
-            $this->visit('/');
+       $topic = factory(Topic::class)->create();
+
+
     }
 }
