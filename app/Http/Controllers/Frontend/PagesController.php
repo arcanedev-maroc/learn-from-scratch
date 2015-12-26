@@ -1,12 +1,15 @@
 <?php namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Topic;
 
 class PagesController extends Controller
 {
-    public function index()
+    public function index(Topic $topicModel)
     {
-        $topics = \App\Models\Topic::all();
-        return view('frontend.home',compact('topics', $topics));
+        // @todo: Get the 5 latest topics for the home page
+        $topics = $topicModel->all();
+
+        return view('frontend.home', compact('topics'));
     }
 }

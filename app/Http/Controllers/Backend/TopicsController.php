@@ -1,22 +1,27 @@
 <?php namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Topic;
 
 class TopicsController extends Controller
 {
-    public function index()
+    public function index(Topic $topicModel)
     {
-        $topics = \App\Models\Topic::all();
-        return view ('backend.topics.index',compact('topics', $topics));
+        $topics = $topicModel->all();
+
+        return view('backend.topics.index', compact('topics'));
     }
 
     public function show($topic)
     {
+        // TODO: implement this method
+
         return view ('backend.topics.show');
     }
 
     public function create()
     {
+        // TODO: implement this method
 
         return view ('backend.topics.create');
     }
@@ -28,6 +33,8 @@ class TopicsController extends Controller
 
     public function edit($topic)
     {
+        // TODO: implement this method
+
         return view ('backend.topics.edit');
     }
 
