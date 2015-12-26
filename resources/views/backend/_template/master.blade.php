@@ -20,9 +20,7 @@
 
         <main class="mdl-layout__content mdl-color--grey-100">
             <div class="mdl-grid demo-content">
-                <div class="mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
-                    @yield('content')
-                </div>
+                @yield('content')
             </div>
         </main>
     </div>
