@@ -1,0 +1,32 @@
+$color-danger:  #D32F2F;
+$color-warning: #F57C00;
+$color-info:    #0288D1;
+
+.mdl-button {
+    &.mdl-button--search-button {
+        color: $color-info;
+
+        &:hover {
+            background-color: $color-info;
+            color: #FFF;
+        }
+    }
+
+    &.mdl-button--edit-button {
+        color: $color-warning;
+
+        &:hover {
+            background-color: $color-warning;
+            color: #FFF;
+        }
+    }
+
+    &.mdl-button--delete-button {
+        color: $color-danger;
+
+        &:hover {
+            background-color: $color-danger;
+            color: #FFF;
+        }
+    }
+}

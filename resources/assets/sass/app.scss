@@ -2,8 +2,9 @@
 //==========================================>
 @import "../bower/font-awesome/scss/font-awesome";
 @import "../bower/material-design-lite/src/material-design-lite";
-@import "../bower/bootstrap-sass/assets/stylesheets/bootstrap";
 
+// Styles
+//--------------------------
 html, body {
     font-family: 'Roboto', 'Helvetica', sans-serif;
     margin: 0;
@@ -11,4 +12,9 @@ html, body {
 }
 
 @import "frontend";
-@import "backtend";
+@import "backend";
+
+// Components
+//--------------------------
+@import "components/tables";
+@import "components/buttons";
