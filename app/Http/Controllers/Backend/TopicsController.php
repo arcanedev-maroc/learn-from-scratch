@@ -2,12 +2,13 @@
 
 use App\Http\Controllers\Controller;
 use App\Models\Topic;
-
+use Carbon\Carbon;
+use Request;
 class TopicsController extends Controller
 {
     public function index(Topic $topicModel)
     {
-        $topics = $topicModel->all();
+        $topics = $topicModel->latest()->get();
 
         return view('backend.topics.index', compact('topics'));
     }
@@ -26,9 +27,11 @@ class TopicsController extends Controller
         return view ('backend.topics.create');
     }
 
-    public function store()
+    public function store(Request $request)
     {
         // TODO: implement this method
+        Topic::create(Request::all());
+        return redirect('/admin/topics');
     }
 
     public function edit($topic)
@@ -46,5 +49,6 @@ class TopicsController extends Controller
     public function delete($topic)
     {
         // TODO: implement this method
+
     }
 }

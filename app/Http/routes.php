@@ -68,11 +68,6 @@ Route::group(['middleware' => ['web']], function () {
                 'uses' => 'TopicsController@index',
             ]);
 
-            Route::get('{topic}', [
-                'as'   => 'admin::topics.show',
-                'uses' => 'TopicsController@show',
-            ]);
-
             Route::get('create', [
                 'as'   => 'admin::topics.create',
                 'uses' => 'TopicsController@create',
@@ -82,7 +77,10 @@ Route::group(['middleware' => ['web']], function () {
                 'as'   => 'admin::topics.store',
                 'uses' => 'TopicsController@store',
             ]);
-
+            Route::get('{topic}', [
+                'as'   => 'admin::topics.show',
+                'uses' => 'TopicsController@show',
+            ]);
             Route::get('{topic}/edit', [
                 'as'   => 'admin::topics.edit',
                 'uses' => 'TopicsController@edit',

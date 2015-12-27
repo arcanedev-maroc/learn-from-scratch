@@ -8,8 +8,7 @@ class PagesController extends Controller
     public function index(Topic $topicModel)
     {
         // @todo: Get the 5 latest topics for the home page
-        $topics = $topicModel->all();
-
+        $topics = $topicModel->latest()->get();
         return view('frontend.home', compact('topics'));
     }
 }
