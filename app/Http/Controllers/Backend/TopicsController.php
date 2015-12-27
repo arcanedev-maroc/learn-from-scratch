@@ -16,8 +16,8 @@ class TopicsController extends Controller
     public function show($topic)
     {
         // TODO: implement this method
-
-        return view ('backend.topics.show');
+            $topic = Topic::findOrFail($topic);
+        return view ('backend.topics.show', compact($topic, 'topic'));
     }
 
     public function create()
@@ -48,7 +48,7 @@ class TopicsController extends Controller
 
     public function delete($topic)
     {
-        // TODO: implement this method
+        // TODO: implement this method$topic
 
     }
 }

@@ -18,10 +18,10 @@
             @foreach($topics as $topic)
                 <tr>
                     <td>{{ $topic->id }}</td>
-                    <td>{{ $topic->title }}</td>
+                    <td><a href="{{ $topic->id }}">{{ $topic->title }}</a></td>
                     <td>
                         <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--search-button">
-                            <i class="material-icons">search</i>
+                            <a href="{{ $topic->id }}"><i class="material-icons">search</i></a>
                         </button>
 
                         <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--edit-button">
@@ -29,7 +29,7 @@
                         </button>
 
                         <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--delete-button">
-                            <a href="{{ route('admin::topics.create') }}"><i class="material-icons">delete</i></a>
+                            <i class="material-icons">delete</i>
                         </button>
                     </td>
                 </tr>
