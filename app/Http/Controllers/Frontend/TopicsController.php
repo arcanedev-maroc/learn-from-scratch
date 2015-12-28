@@ -1,7 +1,7 @@
 <?php namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
-
+use App\Models\Topic;
 class TopicsController extends Controller
 {
     public function index()
@@ -13,6 +13,6 @@ class TopicsController extends Controller
     {
         // TODO: implement this method
         $topic = Topic::findOrFail($topic);
-        return view ('frontend.home', compact($topic, 'topic'));
+        return view ('frontend.show', compact($topic, 'topic'));
     }
 }

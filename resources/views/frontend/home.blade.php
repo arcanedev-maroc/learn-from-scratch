@@ -9,11 +9,11 @@
 
             <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
                 <div class="mdl-card__supporting-text">
-                    <a href="/admin/topics/{{ $topic->id }}"><h4>{{ $topic->title }}</h4></a> {{-- Added temporarily remove it later. --}}
+                    <h4>{{ $topic->title }}</h4> {{-- Added temporarily remove it later. --}}
                     {{ $topic->body }}
                 </div>
                 <div class="mdl-card__actions">
-                    <a href="" class="mdl-button">Read the topic</a>
+                    <a href="{{ route('public::topics.show', [$topic->id]) }}" class="mdl-button">Read the topic</a>
                 </div>
             </div>
             <button data-upgraded=",MaterialButton,MaterialRipple" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn1">

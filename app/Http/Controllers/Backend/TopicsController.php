@@ -15,21 +15,18 @@ class TopicsController extends Controller
 
     public function show($topic)
     {
-        // TODO: implement this method
-            $topic = Topic::findOrFail($topic);
+        $topic = Topic::findOrFail($topic);
         return view ('backend.topics.show', compact($topic, 'topic'));
     }
 
     public function create()
     {
-        // TODO: implement this method
-
         return view ('backend.topics.create');
     }
 
     public function store(Request $request)
     {
-        // TODO: implement this method
+
         Topic::create(Request::all());
         return redirect('/admin/topics');
     }
@@ -46,9 +43,10 @@ class TopicsController extends Controller
         // TODO: implement this method
     }
 
-    public function delete($topic)
+    public function delete(Topic $topic)
     {
-        // TODO: implement this method$topic
+        $topic->delete();
+        return redirect(route('admin::topics.index'));
 
     }
 }

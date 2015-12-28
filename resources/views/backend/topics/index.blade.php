@@ -18,19 +18,22 @@
             @foreach($topics as $topic)
                 <tr>
                     <td>{{ $topic->id }}</td>
-                    <td><a href="{{ $topic->id }}">{{ $topic->title }}</a></td>
+                    <td><a href="{{ route('admin::topics.show', [$topic->id]) }}">{{ $topic->title }}</a></td>
                     <td>
                         <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--search-button">
-                            <a href="{{ $topic->id }}"><i class="material-icons">search</i></a>
+                            <a href="{{ route('admin::topics.show', [$topic->id]) }}"><i class="material-icons">search</i></a>
                         </button>
-
                         <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--edit-button">
                             <i class="material-icons">edit</i>
                         </button>
+                    <form action="{{ route('admin::topics.delete', [$topic->id]) }}" method="POST">
+                                {{ csrf_field() }}
+                                {{ method_field('DELETE') }}
+                         <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--delete-button">
+                                <i class="material-icons">delete</i>
+                         </button>
+                    </form>
 
-                        <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--delete-button">
-                            <i class="material-icons">delete</i>
-                        </button>
                     </td>
                 </tr>
             @endforeach
